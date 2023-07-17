@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useQuery } from 'react-query'
 import { getUsers } from '../apis/usersApi'
+import AboutMe from './AboutMe'
 
 function App() {
   const { isLoading, error, data } = useQuery('users', getUsers)
@@ -13,6 +14,9 @@ function App() {
     <>
       <div className="app">
         <h1>Welcome</h1>
+      </div>
+      <div>
+        <AboutMe />
       </div>
     </>
   )

@@ -1,13 +1,13 @@
-import { createRoot } from 'react-dom/client'
-import { Provider } from 'react-redux'
-import store from './store'
-
+import { createRoot } from 'react-dom'
+import { QueryClient, QueryClientProvider } from 'react-query'
 import App from './components/App'
+
+const queryClient = new QueryClient()
 
 document.addEventListener('DOMContentLoaded', () => {
   createRoot(document.getElementById('app') as HTMLElement).render(
-    <Provider store={store}>
+    <QueryClientProvider client={queryClient}>
       <App />
-    </Provider>
+    </QueryClientProvider>
   )
 })

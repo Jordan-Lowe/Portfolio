@@ -26,7 +26,8 @@ function App() {
     <>
       <div className="app">
         <div className="bg-gray-900 w-screen min-h-screen bg-fixed bg-center bg-cover">
-          <div className="mb-2 pt-20">
+          <div className="pt-20">
+        <h1 className="text-center justify-center relative text-neutral-50 text-7xl mb-8">Welcome</h1>
             <Logos />
           </div>
           <div className="flex">
@@ -36,9 +37,9 @@ function App() {
             <div className="aboutMeContainer flex-grow">
               <div className="aboutMeDiv">
                 <div className="w-3/5 left-1/2 top-1/2 leading-relaxed">
-                  <h1 className="text-center justify-center relative text-neutral-50 text-7xl mb-12">
+                  <h2 className="text-center justify-center relative text-neutral-50 text-7xl mb-12">
                     {selectedLanguage?.language_name}
-                  </h1>
+                  </h2>
                   {selectedLanguage ? (
                     <p>{selectedLanguage.language_info}</p>
                   ) : (
@@ -48,9 +49,9 @@ function App() {
               </div>
             </div>
             <div className="flex text-neutral-50 w-1/5 top-1/2 font-semibold text-lg items-center justify-center line">
-              <div className="flex flex-col items-center pt-2">
-                <h2 className="mb-8 text-4xl">Contact Me</h2>
-                <div className="w-full h-full rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-4">
+              <div className="flex flex-row items-center pt-2">
+                <h2 className="mb-2 text-4xl">Contact Me</h2>
+                <div className="w-full rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-4">
                   <div className="h-full w-full bg-gray-800 z-10">
                     <ContactMe
                       handleSubmit={function (form: {

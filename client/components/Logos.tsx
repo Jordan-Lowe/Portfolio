@@ -1,7 +1,7 @@
 import React from 'react'
 
-const GITHUB_LOGO = 'public/Images/github-mark.svg'
-const Linkdein_Logo = 'public/Images/icons8-linkedin.svg'
+const GITHUB_LOGO = 'public/Images/github-mark-white.svg'
+const Linkdein_Logo = 'public/Images/linkedin-icon-2.svg'
 
 const Logos = () => {
   return (
@@ -17,7 +17,7 @@ const Logos = () => {
               <img
                 src={GITHUB_LOGO}
                 alt="Github logo"
-                style={{ width: '4vw', height: '6vh' }}
+                style={{ width: '3vw', height: '6vh' }}
               />
             </a>
           </li>

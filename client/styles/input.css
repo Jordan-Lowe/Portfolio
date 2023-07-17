@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .corner-gradient,
+  .corner-gradient-bottom-right {
+    position: relative;
+  }
+
+  .corner-gradient::before,
+  .corner-gradient::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(45deg, red, yellow);
+  }
+
+  .corner-gradient::before {
+    top: 0;
+    left: 0;
+    height: 6%; /* Adjust height as needed */
+    width: 20%; /* 50% of the container width */
+  }
+
+  .corner-gradient::after {
+    top: 0;
+    left: 0;
+    width: 1.5%; /* Adjust width as needed */
+    height: 50%; /* 50% of the container height */
+  }
+
+  .corner-gradient-bottom-right::before,
+  .corner-gradient-bottom-right::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(45deg, red, yellow);
+  }
+
+  .corner-gradient-bottom-right::before {
+    bottom: 0;
+    right: 0;
+    height: 6%; /* Adjust height as needed */
+    width: 20%; /* 50% of the container width */
+  }
+
+  .corner-gradient-bottom-right::after {
+    bottom: 0;
+    right: 0;
+    width: 1.5%; /* Adjust width as needed */
+    height: 50%; /* 50% of the container height */
+  }
+
+  .corner-gradient p,
+  .corner-gradient-bottom-right p {
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+  }
+}

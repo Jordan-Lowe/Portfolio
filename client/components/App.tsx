@@ -4,6 +4,7 @@ import { getUsers } from '../apis/usersApi'
 import Logos from './Logos'
 import TechnicalSkills from './TechnicalSkills'
 import '../styles/AboutMe.css'
+import ContactMe from './ContactMe'
 
 type LanguageInfo = {
   id: number
@@ -29,13 +30,15 @@ function App() {
             <Logos />
           </div>
           <div className="flex">
+            <div className="flex text-neutral-50 w-1/5 top-1/2 font-semibold text-lg items-center justify-center line">
+              <TechnicalSkills setSelectedLanguage={setSelectedLanguage} />
+            </div>
             <div className="aboutMeContainer flex-grow">
               <div className="aboutMeDiv">
-                
                 <div className="w-3/5 left-1/2 top-1/2 leading-relaxed">
-                <h1 className="text-center justify-center relative text-neutral-50 text-7xl mb-8">
-                  {selectedLanguage?.language_name}
-                </h1>
+                  <h1 className="text-center justify-center relative text-neutral-50 text-7xl mb-12">
+                    {selectedLanguage?.language_name}
+                  </h1>
                   {selectedLanguage ? (
                     <p>{selectedLanguage.language_info}</p>
                   ) : (
@@ -45,7 +48,23 @@ function App() {
               </div>
             </div>
             <div className="flex text-neutral-50 w-1/5 top-1/2 font-semibold text-lg items-center justify-center line">
-              <TechnicalSkills setSelectedLanguage={setSelectedLanguage} />
+              <div className="flex flex-col items-center pt-2">
+                <h2 className="mb-8 text-4xl">Contact Me</h2>
+                <div className="w-full h-full rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-4">
+                  <div className="h-full w-full bg-gray-800 z-10">
+                    <ContactMe
+                      handleSubmit={function (form: {
+                        name: string
+                        email: string
+                        cellNumber: number
+                        enquiry: string
+                      }): unknown {
+                        throw new Error('Function not implemented.')
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

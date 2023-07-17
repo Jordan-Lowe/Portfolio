@@ -1,9 +1,14 @@
+import React from 'react'
+import '../styles/AboutMe.css'
+
 function AboutMe() {
   return (
-    <div className="corner-gradient">
-      <div className="corner-gradient-bottom-right">
-        <div className="text-neutral-50">
-        <p>
+    <div className="aboutMeContainer">
+      <div className="aboutMeDiv w-full">
+        <h1 className="flex text-center justify-center relative text-neutral-50 text-7xl">
+          Welcome
+        </h1>
+        <p className=" text-neutral-50 font-semibold text-lg text-center">
           My name is Jordan Lowe, I&apos;m a Software Developer based in
           Auckland, New Zealand.
           <br></br>
@@ -27,10 +32,9 @@ function AboutMe() {
           crafting user-friendly interfaces, I&apos;m excited to embrace the
           challenges and opportunities that lie ahead!
         </p>
-        </div>
       </div>
     </div>
   )
 }
 
-export default AboutMe;
+export default AboutMe

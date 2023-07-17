@@ -15,15 +15,11 @@ function App() {
     <>
       <div className="app">
         <div className="bg-gray-900 w-screen min-h-screen bg-fixed bg-center bg-cover">
-          <div className="mb-4 pt-8">
-            <h1 className="flex text-center justify-center relative text-neutral-50 text-5xl">
-              Welcome
-            </h1>
-
+          <div className="mb-2 pt-20">
             <Logos />
           </div>
           <div className="">
-            <div className="p-8 text-center">
+            <div className="w-3/5 left-1/2 top-1/2">
               <AboutMe />
             </div>
           </div>

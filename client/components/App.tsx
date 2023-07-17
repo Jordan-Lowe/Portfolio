@@ -1,20 +1,20 @@
 import { useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from '../hooks'
-import { fetchFruits } from '../slices/fruits'
+import { useQuery } from 'react-query'
+import { getUsers } from '../apis/users'
 
 function App() {
-  const fruits = useAppSelector((state) => state.fruits)
-  const dispatch = useAppDispatch()
-  useEffect(() => {
-    dispatch(fetchFruits())
-  }, [dispatch])
+  const { isLoading, error, data } = useQuery('users', getUsers)
+
+  if (isLoading) return 'Loading...'
+
+  if (error) return 'An error has occurred: ' + error.message
 
   return (
     <>
       <div className="app">
         <h1>Fullstack Boilerplate - with Fruits!</h1>
         <ul>
-          {fruits.map((fruit) => (
+          {data.map((fruit) => (
             <li key={fruit}>{fruit}</li>
           ))}
         </ul>

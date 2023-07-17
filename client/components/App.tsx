@@ -3,6 +3,7 @@ import { useQuery } from 'react-query'
 import { getUsers } from '../apis/usersApi'
 import AboutMe from './AboutMe'
 import Logos from './Logos'
+import TechnicalSkills from './TechnicalSkills'
 
 function App() {
   const { isLoading, error, data } = useQuery('users', getUsers)
@@ -21,6 +22,9 @@ function App() {
           <div className="">
             <div className="w-3/5 left-1/2 top-1/2">
               <AboutMe />
+            </div>
+            <div>
+              <TechnicalSkills />
             </div>
           </div>
         </div>

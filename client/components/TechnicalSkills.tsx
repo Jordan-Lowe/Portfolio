@@ -7,36 +7,42 @@ type Language = {
   language_info: string
 }
 
-function TechnicalSkills() {
+type Props = {
+  setSelectedLanguage: (lang: Language | null) => void
+}
+
+function TechnicalSkills({ setSelectedLanguage }: Props) {
   const [languages, setLanguages] = useState<Language[]>([])
-  const [languageInfo, setLanguageInfo] = useState<string>('')
 
   useEffect(() => {
     const fetchData = async () => {
       const fetchedLanguages = await getAllLanguages()
       setLanguages(fetchedLanguages)
+      if (fetchedLanguages.length > 0) {
+        setSelectedLanguage(fetchedLanguages[0]) // Set first language as selected
+      }
     }
     fetchData()
   }, [])
 
   return (
     <>
-      <div>
-      <ul>
-  {languages.map((language) => (
-    <li 
-      key={language.id} 
-      onClick={() => setLanguageInfo(language.language_info)}
-      onKeyDown={() => setLanguageInfo(language.language_info)}
-      tabIndex={0} 
-      role="button"
-    >
-      {language.language_name}
-    </li>
-  ))}
-</ul>
-
-        {languageInfo && <p>{languageInfo}</p>}
+      <div className="flex text-center right-full pt-2 justify-center ">
+        <h2 className="flex justify-center mb-8 text-4xl">Skills</h2>
+        <ul className="border-2 border-cyan-50">
+          {languages.map((language) => (
+            <li
+              className="mb-8 pl-2 pr-2 "
+              key={language.id}
+              onClick={() => setSelectedLanguage(language)}
+              onKeyDown={() => setSelectedLanguage(language)}
+              tabIndex={0}
+              role="button"
+            >
+              {language.language_name}
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   )

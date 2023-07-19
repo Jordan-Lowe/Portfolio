@@ -2,7 +2,7 @@
 
 .aboutMeContainer {
   height: 70vh;
-  width: 60vw;
+  width: 50vw;
   position: relative;
   margin: 0 auto;
   border-radius: 5px;
@@ -25,7 +25,7 @@
   );
   left: -25%;
   top: -25%;
-  animation: spin 3.5s infinite linear;
+  animation: spin 6s infinite linear;
 }
 
 .aboutMeDiv {
@@ -43,6 +43,26 @@
   display: grid;
   place-items: center;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+  text-align: left; /* Aligns the text to the left */
+  overflow-y: auto; /* Allows content to scroll vertically if it overflows */
+  padding: 1em; /* Padding to ensure the scroll bar does not overlay the text */
+  scrollbar-width: thin; /* Changes width of scrollbar for Firefox */
+  scrollbar-color: rgba(155, 155, 155, 0.7) transparent; /* Changes scrollbar color for Firefox */
+}
+
+/* Changes scrollbar for Chrome, Edge, and Safari */
+.aboutMeDiv::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+.aboutMeDiv::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+
+.aboutMeDiv::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.7); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid transparent; /* creates padding around scroll thumb */
 }
 
 @keyframes spin {
@@ -50,3 +70,40 @@
     transform: rotate(-360deg);
   }
 }
+
+.custom-shape-divider-top-1689743221 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1689743221 svg {
+  position: relative;
+  display: block;
+  width: calc(162% + 1.3px);
+  height: 70vh;
+  transform: rotateY(180deg);
+  animation: move-wave 12s linear infinite alternate;
+}
+
+.custom-shape-divider-top-1689743221 .shape-fill {
+  fill: #0c4a9b;
+}
+
+@keyframes move-wave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+

@@ -6,8 +6,8 @@ const Linkdein_Logo = 'public/Images/linkedin-icon-2.svg'
 const Logos = () => {
   return (
     <>
-      <div className="flex flex-row justify-end mr-6">
-        <ul className="flex ">
+      <div className="flex flex-row justify-end mr-6 ">
+        <ul className="flex z-10">
           <li className="gitHub mr-4">
             <a
               href="https://github.com/Jordan-Lowe"

@@ -9,7 +9,7 @@ exports.seed = function (knex) {
           {
             id: 1,
             language_name: 'About Me',
-            language_info: `My name is Jordan Lowe, I'm a Software Developer based in Auckland,
+            language_info: `I'm a Software Developer based in Auckland,
             New Zealand.
             
             I'm a proud graduate of Dev Academy, with a passion for devising

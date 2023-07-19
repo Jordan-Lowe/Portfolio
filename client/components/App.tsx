@@ -39,9 +39,9 @@ function App() {
               ></path>
             </svg>
           </div>
-          <div className="pt-20">
-            <h1 className="text-center justify-center text-neutral-50 relative text-5xl md:text-7xl mb-8">
-              Welcome
+          <div className="pt-20 flex  justify-between items-center mb-12">
+            <h1 className="left-1/3 text-center justify-center items-center text-neutral-50 relative text-5xl md:text-7xl font-serif">
+              Hello, I&apos;m Jordan Lowe
             </h1>
             <Logos />
           </div>
@@ -64,9 +64,11 @@ function App() {
               </div>
             </div>
             <div className="flex text-neutral-50 w-full md:w-1/5 md:top-1/2 font-semibold text-lg items-center justify-center z-10">
-              <div className="flex flex-col items-center pt-2">
-                <h2 className="mb-2 text-3xl md:text-4xl">Contact Me</h2>
-                <div className="w-full md:w-1/2 rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-4 h-[65vh] md:h-[65vh]">
+              <div className="flex flex-col items-center pt-2 ">
+                <h2 className="mb-2 text-3xl md:text-4xl font-serif">
+                  Contact Me
+                </h2>
+                <div className="w-full md:w-1/2 rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-fuchsia-600 p-4 h-[65vh] md:h-[65vh]">
                   <div className="h-full w-full justify-between flex-row bg-gray-800 z-10">
                     <ContactMe
                       handleSubmit={function (form: {

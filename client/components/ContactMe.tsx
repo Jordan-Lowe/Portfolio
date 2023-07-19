@@ -31,14 +31,13 @@ function ContactMe(props: Users) {
 
 
   return (
-    <div className="flex">
+    <div className="flex h-full justify-between">
       <form onSubmit={handleSubmit}>
-        <div className="pb-4">
+        <div className="pb-4 ">
           <label
             className="font-sans font-bold text-slate-50 pb-2"
             htmlFor="name"
           >
-            Name
           </label>
           <input
             className="p-2 w-full text-base font-bold text-fuchsia-200 bg-slate-950 bg-opacity-50 rounded-lg font-body"
@@ -51,21 +50,21 @@ function ContactMe(props: Users) {
         </div>
 
         <input
-          className="h-[25%] w-[90%] mb-2"
+          className="h-[25%] w-full mb-2 p-2 text-base font-bold text-fuchsia-200 bg-slate-950 bg-opacity-50 rounded-lg font-body"
           name="email"
           type="email"
           placeholder="Email"
           required
         />
         <input
-          className="h-[25%] w-[90%] mb-2"
+          className="h-[25%] w-full mb-2 p-2 text-base font-bold text-fuchsia-200 bg-slate-950 bg-opacity-50 rounded-lg font-body"
           name="cellNumber"
           type="number"
           placeholder="Cell Number"
           required
         />
         <textarea
-          className="h-[25%] mb-2"
+          className="h-[25%] mb-2 p-2 w-full text-base font-bold text-fuchsia-200 bg-slate-950 bg-opacity-50 rounded-lg font-body"
           name="enquiry"
           placeholder="Your Enquiry"
         />

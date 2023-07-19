@@ -68,7 +68,7 @@ function App() {
                 <h2 className="mb-2 text-3xl md:text-4xl font-serif">
                   Contact Me
                 </h2>
-                <div className="w-full md:w-1/2 rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-4 h-[65vh] md:h-[65vh]">
+                <div className="w-full md:w-1/2 rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-fuchsia-600 p-4 h-[65vh] md:h-[65vh]">
                   <div className="h-full w-full justify-between flex-row bg-gray-800 z-10">
                     <ContactMe
                       handleSubmit={function (form: {

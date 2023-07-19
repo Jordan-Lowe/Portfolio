@@ -29,7 +29,7 @@ function TechnicalSkills({ setSelectedLanguage }: Props) {
     <>
       <div className="flex flex-col items-center h-[65vh] pt-2 z-10">
         <h2 className="mb-8 text-3xl md:text-5xl font-serif">FAQ</h2>
-        <div className="w-full h-full rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-4">
+        <div className="w-full h-full rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-fuchsia-600 p-4">
           <div className="h-full w-full bg-gray-800 z-10">
             <ul className="flex flex-col justify-between h-full">
               {languages.map((language) => (

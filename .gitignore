@@ -8,4 +8,5 @@ server/public/styles.css.map
 .env
 tags
 output.css
-userRoutes.ts
+server/routes/userRoutes.ts
+.vscode

@@ -24,7 +24,7 @@
   );
   left: -25%;
   top: -25%;
-  animation: spin 6s infinite linear;
+  animation: spin 8s infinite linear;
 }
 
 .aboutMeDiv {
@@ -104,6 +104,3 @@
     transform: translateX(0);
   }
 }
-
-
-

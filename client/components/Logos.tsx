@@ -11,7 +11,7 @@ const Logos = () => {
         <ul className="flex z-10">
           <li className="Cv mr-4">
             <a
-              href="https://github.com/Jordan-Lowe"
+              href="public/Pdf/Jordan Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >

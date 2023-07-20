@@ -7,6 +7,7 @@
   margin: 0 auto;
   border-radius: 5px;
   overflow: hidden;
+  margin-right: 5%;
 }
 
 .aboutMeContainer:before {

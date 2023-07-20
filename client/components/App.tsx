@@ -4,7 +4,7 @@ import { getUsers } from '../apis/usersApi'
 import Logos from './Logos'
 import TechnicalSkills from './TechnicalSkills'
 import '../styles/AboutMe.css'
-import ContactMe from './ContactMe'
+import NavBar from './NavBar'
 
 type LanguageInfo = {
   id: number
@@ -24,8 +24,8 @@ function App() {
 
   return (
     <>
-      <div className="app h-screen overflow-y-scroll">
-        <div className="bg-gray-900 w-full min-h-full bg-fixed bg-center bg-cover">
+      <div className="app h-screen w-screen overflow-y-scroll">
+        <div className="bg-fuchsia-950 w-full min-h-full bg-fixed bg-center bg-cover">
           <div className="custom-shape-divider-top-1689743221">
             <svg
               data-name="Layer 1"
@@ -39,36 +39,41 @@ function App() {
               ></path>
             </svg>
           </div>
-          <div className="pt-20 flex  justify-between items-center mb-12">
-            <h1 className="left-1/3 text-center justify-center items-center text-neutral-50 relative text-5xl md:text-7xl font-serif">
+          <div className="flex mt-12 justify-between items-center w-4/5">
+            <h1 className="left-1/4 text-center justify-center items-center text-neutral-50 relative text-5xl md:text-7xl font-serif">
               Hello, I&apos;m Jordan Lowe
             </h1>
             <Logos />
           </div>
-          <div className="flex flex-col md:flex-row">
-            <div className="flex text-neutral-50 w-full md:w-1/5 font-semibold text-3xl md:text-4xl justify-center">
-              <TechnicalSkills setSelectedLanguage={setSelectedLanguage} />
-            </div>
-            <div className="aboutMeContainer flex-grow md:w-3/5 mx-2">
-              <div className="aboutMeDiv">
-                <div className="w-full md:w-3/5 mx-auto md:left-1/2 md:top-1/2 leading-relaxed">
-                  <h2 className="text-center justify-center relative text-neutral-50 text-5xl md:text-5xl mb-12">
-                    {selectedLanguage?.language_name}
-                  </h2>
-                  {selectedLanguage ? (
-                    <p className="w-full">{selectedLanguage.language_info}</p>
-                  ) : (
-                    'No language selected'
-                  )}
+          <div className="flex flex-col md:flex-row p-8">
+            <div className="flex flex-row mt-12 flex-shrink">
+              <div className="flex  text-neutral-50 w-full md:w-1/3 font-semibold text-3xl md:text-4xl mr-16">
+                <TechnicalSkills setSelectedLanguage={setSelectedLanguage} />
+              </div>
+              <div className="aboutMeContainer justify-center items-center flex-shrink">
+                <div className="aboutMeDiv justify-center pt-12">
+                  <div className="w-full md:w-4/5 mx-auto md:left-1/2 md:top-1/2">
+                    <h2 className="text-center font-serif font-bold justify-center relative text-neutral-50 text-5xl md:text-5xl mb-12">
+                      {selectedLanguage?.language_name}
+                    </h2>
+                    {selectedLanguage ? (
+                      <p className="w-full font-serif font-semibold text-2xl tracking-wide leading-relaxed">
+                        {selectedLanguage.language_info}
+                      </p>
+                    ) : (
+                      'No language selected'
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="flex h-full md:top-1/2 font-semibold text-lg text-neutral-50 z-10">
-              <div className="flex flex-col right-full">
-                <h2 className="text-3xl md:text-5xl font-serif">Contact Me</h2>
-                <div className=" rounded-md  bg-gradient-to-tr from-pink-500 via-red-500 to-fuchsia-600 p-4 h-[65vh] md:h-[65vh]">
-                  <div className="h-full w-full justify-between flex-row bg-gray-800 z-10">
-                    <ContactMe />
+            <div className="flex z-10">
+              <div className="flex h-screen font-semibold right-0 fixed top-0 text-lg text-neutral-50 z-10">
+                <div className="flex flex-col">
+                  <div className=" rounded-md h-full bg-gradient-to-tr from-pink-500 via-red-500 to-fuchsia-600 pl-4">
+                    <div className="flex h-full flex-col bg-fuchsia-950 z-10">
+                      <NavBar />
+                    </div>
                   </div>
                 </div>
               </div>

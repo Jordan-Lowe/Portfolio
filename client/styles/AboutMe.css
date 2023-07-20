@@ -2,12 +2,11 @@
 
 .aboutMeContainer {
   height: 70vh;
-  width: 50vw;
+  width: 65vw;
   position: relative;
   margin: 0 auto;
   border-radius: 5px;
   overflow: hidden;
-  margin-right: 5%;
 }
 
 .aboutMeContainer:before {
@@ -15,33 +14,22 @@
   height: 150%;
   width: 150%;
   position: absolute;
-  background: conic-gradient(
-    #fd004c,
-    #fe9000,
-    #fff020,
-    #3363ff,
-    #b102b7,
-    #fd004c
-  );
+  background: conic-gradient(#5998c5, #c6d8af, #034078, #f07167, #5f0f40);
   left: -25%;
   top: -25%;
-  animation: spin 10s infinite linear;
+  animation: spin 20s infinite linear;
 }
 
 .aboutMeDiv {
-  background-color: #1c1b29;
+  background-color: #4a044e;
   height: 91%;
   width: 93%;
   position: relative;
-  top: 3.5%;
+  top: 4.5%;
   left: 3.5%;
   border-radius: 5px;
-  font-family: 'Poppins', sans-serif;
   color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 6px;
   display: grid;
-  place-items: center;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
   text-align: left; /* Aligns the text to the left */
   overflow-y: auto; /* Allows content to scroll vertically if it overflows */
@@ -87,11 +75,11 @@
   width: calc(162% + 1.3px);
   height: 70vh;
   transform: rotateY(180deg);
-  animation: move-wave 30s linear infinite alternate;
+  animation: move-wave 20s linear infinite alternate;
 }
 
 .custom-shape-divider-top-1689743221 .shape-fill {
-  fill: #a191de;
+  fill: #f07167;
 }
 
 @keyframes move-wave {
@@ -104,4 +92,12 @@
   100% {
     transform: translateX(0);
   }
+}
+
+.navBar {
+  text-align: left; /* Aligns the text to the left */
+  overflow-y: auto; /* Allows content to scroll vertically if it overflows */
+  padding: 1em; /* Padding to ensure the scroll bar does not overlay the text */
+  scrollbar-width: thin; /* Changes width of scrollbar for Firefox */
+  scrollbar-color: rgba(155, 155, 155, 0.7) transparent; /* Changes scrollbar color for Firefox */
 }

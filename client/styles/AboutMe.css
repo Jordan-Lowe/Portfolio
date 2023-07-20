@@ -24,12 +24,12 @@
   );
   left: -25%;
   top: -25%;
-  animation: spin 8s infinite linear;
+  animation: spin 10s infinite linear;
 }
 
 .aboutMeDiv {
   background-color: #1c1b29;
-  height: 93%;
+  height: 91%;
   width: 93%;
   position: relative;
   top: 3.5%;
@@ -86,7 +86,7 @@
   width: calc(162% + 1.3px);
   height: 70vh;
   transform: rotateY(180deg);
-  animation: move-wave 12s linear infinite alternate;
+  animation: move-wave 30s linear infinite alternate;
 }
 
 .custom-shape-divider-top-1689743221 .shape-fill {

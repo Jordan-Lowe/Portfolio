@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
 
 .aboutMeContainer {
   height: 70vh;
@@ -75,7 +77,7 @@
   width: calc(162% + 1.3px);
   height: 70vh;
   transform: rotateY(180deg);
-  animation: move-wave 20s linear infinite alternate;
+  animation: move-wave 30s linear infinite alternate;
 }
 
 .custom-shape-divider-top-1689743221 .shape-fill {
@@ -94,7 +96,16 @@
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, li, a, span {
+  font-family: 'Lato', sans-serif;
+}
+
 .navBar {
+  display: flexbox;
   text-align: left; /* Aligns the text to the left */
   overflow-y: auto; /* Allows content to scroll vertically if it overflows */
   padding: 1em; /* Padding to ensure the scroll bar does not overlay the text */

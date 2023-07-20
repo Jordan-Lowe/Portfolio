@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/AboutMe.css'
 
-
 const Projects_logo = 'public/Images/task-list-menu-document-svgrepo-com.svg'
 
 function Projects({ isActive, onToggle }) {
@@ -18,16 +17,14 @@ function Projects({ isActive, onToggle }) {
           </button>
         </div>
         {isActive && (
-          <div
-            className="projectContent"
-          >
+          <div className="projectContent">
             <ul className="">
               <h4>Pinky Promise</h4>
               <p>
                 During the final week at Dev Academy, I collaborated with a team
-                of four on a task to deliver a full-stack application
-                in seven days. The project culminated with a presentation in
-                front of an audience of approximately 70 people. <br></br>
+                of four on a task to deliver a full-stack application in seven
+                days. The project culminated with a presentation in front of an
+                audience of approximately 70 people. <br></br>
                 <br></br>
                 We embraced Agile methodologies to manage our project
                 effectively. <br></br>Each day began with a stand-up meeting
@@ -55,12 +52,21 @@ function Projects({ isActive, onToggle }) {
                 test cases, and then crafting the code to meet the tests. This
                 process highlighted my understanding of essential software
                 development practices and my ability to write reliable, testable
-                code. <br></br><br></br>
+                code. <br></br>
+                <br></br>
                 This intensive project experience not only consolidated my
                 technical skills but also enhanced my understanding of effective
                 project management, teamwork, and agile practices. I look
                 forward to leveraging these skills and experiences in my future
-                role.
+                role. <br></br>
+                <br></br>
+                Link to project on GitHub:{' '}
+                <a
+                  href="https://github.com/kahikatea-2023/pinky-promise"
+                  rel="Link to Porject"
+                >
+                  Pinky Promise
+                </a>
               </p>
             </ul>
           </div>

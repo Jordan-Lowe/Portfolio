@@ -33,7 +33,7 @@ const ContactMe = ({ isActive, onToggle }) => {
               <label htmlFor="email">Email</label>
             </li>
             <input
-              className="h-[25%] w-full mb-2 p-2 text-base font-bold text-fuchsia-200 bg-slate-950 bg-opacity-50 rounded-lg font-body"
+              className="w-full mb-2 p-2 text-base font-bold text-fuchsia-200 bg-slate-950 bg-opacity-50 rounded-lg font-body"
               name="email"
               type="email"
               placeholder="Email"
@@ -43,7 +43,7 @@ const ContactMe = ({ isActive, onToggle }) => {
               <label htmlFor="cellNumber">Number</label>
             </li>
             <input
-              className="h-[25%] w-full mb-2 p-2 text-base font-bold text-fuchsia-200 bg-slate-950 bg-opacity-50 rounded-lg font-body"
+              className="w-full mb-2 p-2 text-base font-bold text-fuchsia-200 bg-slate-950 bg-opacity-50 rounded-lg font-body"
               name="cellNumber"
               type="number"
               placeholder="Cell Number"
@@ -53,7 +53,7 @@ const ContactMe = ({ isActive, onToggle }) => {
               <label htmlFor="enquiry">Enquiry</label>
             </li>
             <textarea
-              className="h-[25%] mb-2 p-2 w-full text-base font-bold text-fuchsia-200 bg-slate-950 bg-opacity-50 rounded-lg font-body"
+              className="mb-2 p-2 w-full text-base font-bold text-fuchsia-200 bg-slate-950 bg-opacity-50 rounded-lg font-body"
               name="enquiry"
               placeholder="Your Enquiry"
             />

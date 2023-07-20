@@ -63,23 +63,12 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="flex text-neutral-50 w-full md:w-1/5 md:top-1/2 font-semibold text-lg items-center justify-center z-10">
-              <div className="flex flex-col items-center">
-                <h2 className="mb-8 text-3xl md:text-5xl font-serif">
-                  Contact Me
-                </h2>
-                <div className="w-full md:w-1/2 rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-fuchsia-600 p-4 h-[65vh] md:h-[65vh]">
+            <div className="flex h-full md:top-1/2 font-semibold text-lg text-neutral-50 z-10">
+              <div className="flex flex-col right-full">
+                <h2 className="text-3xl md:text-5xl font-serif">Contact Me</h2>
+                <div className=" rounded-md  bg-gradient-to-tr from-pink-500 via-red-500 to-fuchsia-600 p-4 h-[65vh] md:h-[65vh]">
                   <div className="h-full w-full justify-between flex-row bg-gray-800 z-10">
-                    <ContactMe
-                      handleSubmit={function (form: {
-                        name: string
-                        email: string
-                        cellNumber: number
-                        enquiry: string
-                      }): unknown {
-                        throw new Error('Function not implemented.')
-                      }}
-                    />
+                    <ContactMe />
                   </div>
                 </div>
               </div>

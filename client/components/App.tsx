@@ -64,8 +64,8 @@ function App() {
               </div>
             </div>
             <div className="flex text-neutral-50 w-full md:w-1/5 md:top-1/2 font-semibold text-lg items-center justify-center z-10">
-              <div className="flex flex-col items-center pt-2 ">
-                <h2 className="mb-2 text-3xl md:text-4xl font-serif">
+              <div className="flex flex-col items-center">
+                <h2 className="mb-8 text-3xl md:text-5xl font-serif">
                   Contact Me
                 </h2>
                 <div className="w-full md:w-1/2 rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-fuchsia-600 p-4 h-[65vh] md:h-[65vh]">

@@ -21,14 +21,13 @@ function ContactMe(props: Users) {
     }
 
     addUser(form) // Call the addUser API
-      .then(response => {
-        console.log(response);
+      .then((response) => {
+        console.log(response)
       })
-      .catch(error => {
-        console.log(error);
-      });
+      .catch((error) => {
+        console.log(error)
+      })
   }
-
 
   return (
     <div className="flex h-full justify-between">
@@ -37,8 +36,7 @@ function ContactMe(props: Users) {
           <label
             className="font-sans font-bold text-slate-50 pb-2"
             htmlFor="name"
-          >
-          </label>
+          ></label>
           <input
             className="p-2 w-full text-base font-bold text-fuchsia-200 bg-slate-950 bg-opacity-50 rounded-lg font-body"
             type="text"

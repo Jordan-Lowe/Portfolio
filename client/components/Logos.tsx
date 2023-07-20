@@ -2,12 +2,26 @@ import React from 'react'
 
 const GITHUB_LOGO = 'public/Images/github-mark-white.svg'
 const Linkdein_Logo = 'public/Images/linkedin-icon-2.svg'
+const CV_Logo = 'public/Images/reshot-icon-resume-XTALQHGEVC.svg'
 
 const Logos = () => {
   return (
     <>
       <div className="flex flex-row justify-end mr-20 ">
         <ul className="flex z-10">
+          <li className="Cv mr-4">
+            <a
+              href="https://github.com/Jordan-Lowe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={CV_Logo}
+                alt="CV logo"
+                style={{ width: '3vw', height: '6vh' }}
+              />
+            </a>
+          </li>
           <li className="gitHub mr-4">
             <a
               href="https://github.com/Jordan-Lowe"

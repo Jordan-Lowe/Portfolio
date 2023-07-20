@@ -25,7 +25,7 @@ function NavBar() {
               onToggle={() => toggleSection('contactMe')}
             />
           </li>
-          <li className="navItem pt-8 top-1/2">
+          <li className="navItem pt-8 top-1/2 text-center max-w-md">
             <Projects
               isActive={activeSection === 'projects'}
               onToggle={() => toggleSection('projects')}

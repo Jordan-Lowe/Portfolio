@@ -62,7 +62,7 @@ function NavBar() {
               <img
                 src={Projects_logo}
                 alt="Projects logo"
-                style={{ width: '5vw', height: '6vh' }}
+                style={{ width: '5vw', height: '7vh' }}
               />
             </a>
           </li>

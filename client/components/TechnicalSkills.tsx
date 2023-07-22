@@ -30,11 +30,11 @@ function TechnicalSkills({ setSelectedLanguage }: Props) {
       <div className="flex flex-col items-center z-10 w-full px-8">
         <div className="w-full h-full rounded-md bg-gradient-to-r from-[#034078] via-[#c6d8af] to-[#5998c5] p-8">
           <div className="h-full w-full bg-fuchsia-950 z-10 flex flex-col flex-grow">
-        <h2 className="pt-4 text-4xl md:text-4xl font-serif text-center ">FAQ</h2>
+        <h2 className="pt-4 text-4xl md:text-4xl text-center ">FAQ</h2>
             <ul className="flex flex-col justify-evenly h-full">
               {languages.map((language) => (
                 <li
-                  className="pl-2 pr-2 text-2xl md:text-2xl"
+                  className="pl-8 pr-2 text-2xl md:text-2xl"
                   key={language.id}
                   onClick={() => setSelectedLanguage(language)}
                   onKeyDown={() => setSelectedLanguage(language)}

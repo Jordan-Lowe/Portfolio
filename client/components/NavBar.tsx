@@ -6,6 +6,8 @@ function NavBar() {
   const [activeSection, setActiveSection] = useState(null)
 
   const CV_Logo = 'public/Images/curriculum-vitae-resume-svgrepo-com.svg'
+  const GITHUB_LOGO = 'public/Images/github-mark-white.svg'
+  const Linkdein_Logo = 'public/Images/linkedin-icon-2.svg'
 
   const toggleSection = (sectionName: string | React.SetStateAction<null>) => {
     if (activeSection === sectionName) {
@@ -17,31 +19,57 @@ function NavBar() {
 
   return (
     <div className="navContainer flex flex-col h-screen">
-      <div className="navBar h-full flex  bg-full items-center">
-        <ul className='flex flex-col px-4 pt-8'>
-          <li className="navItem  w-full flex pt-8 justify-evenly ">
+      <div className="navBar h-full flex  bg-full">
+        <ul className="flex flex-col px-4 justify-evenly">
+          <li className="navItem  w-full flex justify-center">
+            <a
+              href="https://github.com/Jordan-Lowe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={GITHUB_LOGO}
+                alt="Github logo"
+                style={{ width: '3vw', height: '6vh' }}
+              />
+            </a>
+          </li>
+          <li className="navItem  w-full flex  justify-center">
+            <a
+              href="https://www.linkedin.com/in/jordanlowe5/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={Linkdein_Logo}
+                alt="Linkdein logo"
+                style={{ width: '4vw', height: '6vh' }}
+              />
+            </a>
+          </li>
+          <li className="navItem  w-full flex  justify-center">
             <ContactMe
               isActive={activeSection === 'contactMe'}
               onToggle={() => toggleSection('contactMe')}
             />
           </li>
-          <li className="navItem pt-8 top-1/2 text-center max-w-md">
+          <li className="navItem  top-1/2 text-center max-w-md justify-center">
             <Projects
               isActive={activeSection === 'projects'}
               onToggle={() => toggleSection('projects')}
             />
           </li>
-          <li className="Cv flex pt-8 top-3/4">
+          <li className="Cv flex  justify-center">
             <a
               href="public/Pdf/Jordan Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-              className='flex justify-center'
+                className="flex justify-center"
                 src={CV_Logo}
                 alt="CV logo"
-                style={{width: '5vw', height: '7vh' }}
+                style={{ width: '5vw', height: '7vh' }}
               />
             </a>
           </li>

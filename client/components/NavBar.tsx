@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import ContactMe from './ContactMe'
-import Projects from './Projects'
 
 function NavBar() {
   const [activeSection, setActiveSection] = useState(null)
@@ -8,6 +7,7 @@ function NavBar() {
   const CV_Logo = 'public/Images/curriculum-vitae-resume-svgrepo-com.svg'
   const GITHUB_LOGO = 'public/Images/github-mark-white.svg'
   const Linkdein_Logo = 'public/Images/linkedin-icon-2.svg'
+  const Projects_logo = 'public/Images/task-list-menu-document-svgrepo-com.svg'
 
   const toggleSection = (sectionName: string | React.SetStateAction<null>) => {
     if (activeSection === sectionName) {
@@ -54,10 +54,17 @@ function NavBar() {
             />
           </li>
           <li className="navItem  top-1/2 text-center max-w-md justify-center">
-            <Projects
-              isActive={activeSection === 'projects'}
-              onToggle={() => toggleSection('projects')}
-            />
+            <a
+              href="https://github.com/kahikatea-2023/pinky-promise"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={Projects_logo}
+                alt="Projects logo"
+                style={{ width: '5vw', height: '6vh' }}
+              />
+            </a>
           </li>
           <li className="Cv flex  justify-center">
             <a

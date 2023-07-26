@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import ContactMe from './ContactMe'
 import { TiLightbulb } from 'react-icons/ti'
 import '../styles/AboutMe.css'
 
@@ -9,6 +8,7 @@ function NavBar() {
   const CV_Logo = 'public/Images/curriculum-vitae-resume-svgrepo-com.svg'
   const GITHUB_LOGO = 'public/Images/github-mark-white.svg'
   const Linkdein_Logo = 'public/Images/linkedin-icon-2.svg'
+  const Form_logo = 'public/Images/gmail-icon-logo-svgrepo-com.svg'
 
   const toggleSection = (sectionName: string | React.SetStateAction<null>) => {
     if (activeSection === sectionName) {
@@ -57,21 +57,22 @@ function NavBar() {
               Linkdein
             </div>
           </li>
-          <li className="navItem  w-full flex  justify-center group">
-            <ContactMe
-              isActive={activeSection === 'contactMe'}
-              onToggle={() => toggleSection('contactMe')}
-            />
-
-            <div
-              className={`sideBarIcon group-hover:scale-100 ${
-                activeSection === 'contactMe'
-                  ? 'hidden-but-visible-on-hover'
-                  : ''
-              }`}
+          <li className="Cv flex  justify-center group">
+            <a
+              href="https://forms.gle/UQDfrossS5JPVno3A"
+              target="_blank"
+              rel="noopener noreferrer"
             >
+              <img
+                className="flex justify-center navImg w-[5vw] h-[7vh] hover:scale-125 transition duration-300 ease-in-out"
+                src={Form_logo}
+                alt="Form logo"
+              />
+            </a>
+
+            <div className="sideBarIcon group-hover:scale-100">
               <TiLightbulb className="yellow-icon" />
-              Email
+              Contact Me
             </div>
           </li>
 

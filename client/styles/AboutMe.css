@@ -151,10 +151,4 @@ span {
   margin-right: 0%;
 }
 
-.hidden-but-visible-on-hover {
-  visibility: hidden;
-}
 
-.hidden-but-visible-on-hover:hover {
-  visibility: visible;
-}

@@ -12,14 +12,9 @@ type LanguageInfo = {
 }
 
 function App() {
-  const { isLoading, error, data } = useQuery('users', getUsers)
   const [selectedLanguage, setSelectedLanguage] = useState<LanguageInfo | null>(
     null,
   )
-
-  if (isLoading) return 'Loading...'
-
-  if (error) return 'An error has occurred: ' + error
 
   return (
     <>

@@ -72,7 +72,7 @@ function NavBar() {
 
             <div className="sideBarIcon group-hover:scale-100">
               <TiLightbulb className="yellow-icon" />
-              Contact Me
+              Contact Form
             </div>
           </li>
 

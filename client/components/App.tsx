@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useQuery } from 'react-query'
-import { getUsers } from '../apis/usersApi'
 import TechnicalSkills from './TechnicalSkills'
 import '../styles/AboutMe.css'
 import NavBar from './NavBar'

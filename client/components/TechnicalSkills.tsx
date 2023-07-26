@@ -19,7 +19,7 @@ function TechnicalSkills({ setSelectedLanguage }: Props) {
       const fetchedLanguages = await getAllLanguages()
       setLanguages(fetchedLanguages)
       if (fetchedLanguages.length > 0) {
-        setSelectedLanguage(fetchedLanguages[0]) // Set first language as selected
+        setSelectedLanguage(fetchedLanguages[0])
       }
     }
     fetchData()

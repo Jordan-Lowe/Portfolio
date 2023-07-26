@@ -2,6 +2,8 @@ import { Router } from 'express'
 import nodemailer from 'nodemailer'
 import * as db from '../db/usersDB'
 import { UserDraftInfo } from '../../models/userModels'
+import dotenv from 'dotenv'
+dotenv.config()
 
 const router = Router()
 
@@ -26,9 +28,9 @@ router.post('/', async (req, res) => {
       service: 'gmail',
       auth: {
         user: 'jordanlowe659@gmail.com',
-        pass: 'YOUR_PASSWORD',
+        pass: process.env.EMAIL_PASSWORD,
       },
-    });
+    })
 
     const mailOptions = {
       from: `${userInfo.email}`,
@@ -40,15 +42,15 @@ router.post('/', async (req, res) => {
         Cell Number: ${userInfo.cellNumber}
         Enquiry: ${userInfo.enquiry || 'No enquiry provided.'}
       `,
-    };
+    }
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-        console.log(error);
+        console.log(error)
       } else {
-        console.log('Email sent: ' + info.response);
+        console.log('Email sent: ' + info.response)
       }
-    });
+    })
 
     res.json({ message: 'Form data successfully stored and email sent.' })
   } catch (error) {
@@ -56,7 +58,5 @@ router.post('/', async (req, res) => {
     res.status(500).json({ message: 'Something went wrong' })
   }
 })
-
-
 
 export default router

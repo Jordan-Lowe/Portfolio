@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import ContactMe from './ContactMe'
+import { TiLightbulb } from 'react-icons/ti'
+import '../styles/AboutMe.css'
 
 function NavBar() {
   const [activeSection, setActiveSection] = useState(null)
@@ -7,7 +9,6 @@ function NavBar() {
   const CV_Logo = 'public/Images/curriculum-vitae-resume-svgrepo-com.svg'
   const GITHUB_LOGO = 'public/Images/github-mark-white.svg'
   const Linkdein_Logo = 'public/Images/linkedin-icon-2.svg'
-  const Projects_logo = 'public/Images/task-list-menu-document-svgrepo-com.svg'
 
   const toggleSection = (sectionName: string | React.SetStateAction<null>) => {
     if (activeSection === sectionName) {
@@ -21,64 +22,75 @@ function NavBar() {
     <div className="navContainer flex flex-col h-screen">
       <div className="navBar h-full flex  bg-full">
         <ul className="flex flex-col px-4 justify-evenly">
-          <li className="navItem  w-full flex justify-center">
+          <li className="navItem  w-full flex justify-center group">
             <a
               href="https://github.com/Jordan-Lowe"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
+                className="navImg w-[3vw] h-[6vh] hover:scale-125 transition duration-300 ease-in-out"
                 src={GITHUB_LOGO}
                 alt="Github logo"
-                style={{ width: '3vw', height: '6vh' }}
               />
             </a>
+
+            <div className="sideBarIcon group-hover:scale-100">
+              <TiLightbulb className="yellow-icon" />
+              Github
+            </div>
           </li>
-          <li className="navItem  w-full flex  justify-center">
+          <li className="navItem  w-full flex  justify-center group">
             <a
               href="https://www.linkedin.com/in/jordanlowe5/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
+                className="navImg w-[3vw] h-[6vh] hover:scale-125 transition duration-300 ease-in-out"
                 src={Linkdein_Logo}
                 alt="Linkdein logo"
-                style={{ width: '4vw', height: '6vh' }}
               />
             </a>
+            <div className="sideBarIcon group-hover:scale-100">
+              <TiLightbulb className="yellow-icon" />
+              Linkdein
+            </div>
           </li>
-          <li className="navItem  w-full flex  justify-center">
+          <li className="navItem  w-full flex  justify-center group">
             <ContactMe
               isActive={activeSection === 'contactMe'}
               onToggle={() => toggleSection('contactMe')}
             />
-          </li>
-          <li className="navItem  top-1/2 text-center max-w-md justify-center">
-            <a
-              href="https://github.com/kahikatea-2023/pinky-promise"
-              target="_blank"
-              rel="noopener noreferrer"
+
+            <div
+              className={`sideBarIcon group-hover:scale-100 ${
+                activeSection === 'contactMe'
+                  ? 'hidden-but-visible-on-hover'
+                  : ''
+              }`}
             >
-              <img
-                src={Projects_logo}
-                alt="Projects logo"
-                style={{ width: '5vw', height: '7vh' }}
-              />
-            </a>
+              <TiLightbulb className="yellow-icon" />
+              Email
+            </div>
           </li>
-          <li className="Cv flex  justify-center">
+
+          <li className="Cv flex  justify-center group">
             <a
               href="public/Pdf/Jordan Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                className="flex justify-center"
+                className="flex justify-center navImg w-[5vw] h-[7vh] hover:scale-125 transition duration-300 ease-in-out"
                 src={CV_Logo}
                 alt="CV logo"
-                style={{ width: '5vw', height: '7vh' }}
               />
             </a>
+            <div className="sideBarIcon group-hover:scale-100">
+              <TiLightbulb className="yellow-icon" />
+              Resume
+            </div>
           </li>
         </ul>
       </div>

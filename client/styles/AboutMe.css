@@ -96,19 +96,65 @@
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
-p, li, a, span {
+p,
+li,
+a,
+span {
   font-family: 'Lato', sans-serif;
 }
 
 .navBar {
-  display: flexbox;
+  display: flex;
   text-align: left; /* Aligns the text to the left */
   overflow-y: auto; /* Allows content to scroll vertically if it overflows */
   padding: 1em; /* Padding to ensure the scroll bar does not overlay the text */
   scrollbar-width: thin; /* Changes width of scrollbar for Firefox */
   scrollbar-color: rgba(155, 155, 155, 0.7) transparent; /* Changes scrollbar color for Firefox */
+}
+
+.sideBarIcon {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: min-content;
+  height: fit-content;
+  right: 60%;
+  padding: 0.5rem;
+  margin: 1.5rem;
+  min-width: min-content;
+  min-height: fit-content;
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  background-color: #1a202c;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition-property: all;
+  transition-duration: 0.1s;
+  transform-origin: left;
+  transform: scale(0);
+}
+
+.yellow-icon {
+  color: #f6e05e;
+  min-height: 2vh;
+  min-width: 2vw;
+  margin-right: 0%;
+}
+
+.hidden-but-visible-on-hover {
+  visibility: hidden;
+}
+
+.hidden-but-visible-on-hover:hover {
+  visibility: visible;
 }

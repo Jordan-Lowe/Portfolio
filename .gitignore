@@ -10,3 +10,8 @@ tags
 output.css
 server/routes/userRoutes.ts
 .vscode
+server/db/seeds/users.js
+server/db/seeds/languages.js
+public/Images
+public/Pdf
+```

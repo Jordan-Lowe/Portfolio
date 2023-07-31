@@ -29,7 +29,7 @@ function NavBar() {
               rel="noopener noreferrer"
             >
               <img
-                className="navImg w-[3vw] h-[6vh] hover:scale-125 transition duration-300 ease-in-out"
+                className="navImg  w-16 h-18 sm:w-18 sm:h-20 md:w-20 md:h-22 hover:scale-125 transition duration-300 ease-in-out"
                 src={GITHUB_LOGO}
                 alt="Github logo"
               />
@@ -47,14 +47,14 @@ function NavBar() {
               rel="noopener noreferrer"
             >
               <img
-                className="navImg w-[3vw] h-[6vh] hover:scale-125 transition duration-300 ease-in-out"
+                className="navImg  w-16 h-20 sm:w-18 sm:h-22 md:w-20 md:h-24 hover:scale-125 transition duration-300 ease-in-out"
                 src={Linkdein_Logo}
-                alt="Linkdein logo"
+                alt="Linkedin logo"
               />
             </a>
             <div className="sideBarIcon group-hover:scale-100">
               <TiLightbulb className="yellow-icon" />
-              Linkdein
+              Linkedin
             </div>
           </li>
           <li className="Cv flex  justify-center group">
@@ -64,7 +64,7 @@ function NavBar() {
               rel="noopener noreferrer"
             >
               <img
-                className="flex justify-center navImg w-[5vw] h-[7vh] hover:scale-125 transition duration-300 ease-in-out"
+                className="flex justify-center navImg w-16 h-20 sm:w-18 sm:h-22 md:w-20 md:h-24 hover:scale-125 transition duration-300 ease-in-out"
                 src={Form_logo}
                 alt="Form logo"
               />
@@ -72,7 +72,7 @@ function NavBar() {
 
             <div className="sideBarIcon group-hover:scale-100">
               <TiLightbulb className="yellow-icon" />
-              Contact Form
+              Contact
             </div>
           </li>
 
@@ -83,7 +83,7 @@ function NavBar() {
               rel="noopener noreferrer"
             >
               <img
-                className="flex justify-center navImg w-[5vw] h-[7vh] hover:scale-125 transition duration-300 ease-in-out"
+                className="flex justify-center navImg  w-18 h-22 sm:w-20 sm:h-24 md:w-22 md:h-24 hover:scale-125 transition duration-300 ease-in-out"
                 src={CV_Logo}
                 alt="CV logo"
               />

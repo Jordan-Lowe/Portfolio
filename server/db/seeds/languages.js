@@ -32,8 +32,8 @@ exports.seed = function (knex) {
         
           {
             id: 2,
-            language_name: 'Typescipt/Javascript',
-            language_info: `JavaScript and TypeScript were the cornerstone of my learning at Dev Academy, providing a sturdy foundation for all my coding endeavors. I've extensively used JavaScript and TypeScript in a variety of projects, from front-end development to back-end server-side scripting. I've been able to create dynamic and interactive web applications by leveraging JavaScript's versatile and powerful features, such as its event-driven programming model and asynchronous operations. TypeScript's static typing feature has greatly enhanced my ability to write safer and more understandable code, improving software maintainability. By defining types explicitly, TypeScript has fostered my ability to spot errors early in the development cycle and to work more proficiently in large codebases.`,
+            language_name: 'Typescript/Javascript',
+            language_info: `Javascript and Typescript were the cornerstone of my learning at Dev Academy, providing a sturdy foundation for all my coding endeavors. I've extensively used JavaScript and TypeScript in a variety of projects, from front-end development to back-end server-side scripting. I've been able to create dynamic and interactive web applications by leveraging JavaScript's versatile and powerful features, such as its event-driven programming model and asynchronous operations. TypeScript's static typing feature has greatly enhanced my ability to write safer and more understandable code, improving software maintainability. By defining types explicitly, TypeScript has fostered my ability to spot errors early in the development cycle and to work more proficiently in large codebases.`,
           },
           {
             id: 3,

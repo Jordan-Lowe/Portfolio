@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
 
+
+
 .aboutMeContainer {
   height: 70vh;
   width: 65vw;
@@ -9,6 +11,7 @@
   margin: 0 auto;
   border-radius: 5px;
   overflow: hidden;
+  margin-left: 3%;
 }
 
 .aboutMeContainer:before {
@@ -33,26 +36,25 @@
   color: #ffffff;
   display: grid;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
-  text-align: left; /* Aligns the text to the left */
-  overflow-y: auto; /* Allows content to scroll vertically if it overflows */
-  padding: 1em; /* Padding to ensure the scroll bar does not overlay the text */
-  scrollbar-width: thin; /* Changes width of scrollbar for Firefox */
-  scrollbar-color: rgba(155, 155, 155, 0.7) transparent; /* Changes scrollbar color for Firefox */
+  text-align: left;
+  overflow-y: auto;
+  padding: 1em;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
 }
 
-/* Changes scrollbar for Chrome, Edge, and Safari */
 ::-webkit-scrollbar {
-  width: 8px; /* width of the entire scrollbar */
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; /* color of the tracking area */
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(155, 155, 155, 0.7); /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-  border: 3px solid transparent; /* creates padding around scroll thumb */
+  background-color: rgba(155, 155, 155, 0.7);
+  border-radius: 20px;
+  border: 3px solid transparent;
 }
 
 @keyframes spin {
@@ -114,11 +116,11 @@ span {
 
 .navBar {
   display: flex;
-  text-align: left; /* Aligns the text to the left */
-  overflow-y: auto; /* Allows content to scroll vertically if it overflows */
-  padding: 1em; /* Padding to ensure the scroll bar does not overlay the text */
-  scrollbar-width: thin; /* Changes width of scrollbar for Firefox */
-  scrollbar-color: rgba(155, 155, 155, 0.7) transparent; /* Changes scrollbar color for Firefox */
+  text-align: left;
+  overflow-y: auto;
+  padding: 1em;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
 }
 
 .sideBarIcon {
@@ -152,3 +154,93 @@ span {
 }
 
 
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .navBar {
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-x: auto;
+  }
+
+  .navItem {
+    margin-right: 1rem;
+  }
+
+  .navImg {
+    width: 10vw;
+    height: 10vh;
+  }
+
+  .sideBarIcon {
+    right: 0;
+    top: 60%;
+  }
+
+  .yellow-icon {
+    min-height: 4vh;
+    min-width: 4vw;
+  }
+
+  .aboutMeContainer {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    flex-direction: column;
+    justify-content: initial;
+    overflow-x: initial;
+  }
+
+  .navItem {
+    margin-bottom: 1rem;
+  }
+
+  .navImg {
+    width: 20vw;
+    height: 20vh;
+  }
+
+  .sideBarIcon {
+    right: 60%;
+    top: 0;
+  }
+
+  .yellow-icon {
+    min-height: 6vh;
+    min-width: 6vw;
+  }
+
+  .aboutMeContainer {
+    width: 95vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .navBar {
+    flex-direction: column;
+    justify-content: initial;
+    overflow-x: initial;
+  }
+
+  .navImg {
+    width: 30vw;
+    height: 30vh;
+  }
+
+  .sideBarIcon {
+    right: 70%;
+  }
+
+  .yellow-icon {
+    min-height: 8vh;
+    min-width: 8vw;
+  }
+
+  .aboutMeContainer {
+    width: 100vw;
+  }
+
+}

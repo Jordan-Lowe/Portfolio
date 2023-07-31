@@ -17,8 +17,8 @@ function App() {
 
   return (
     <>
-      <div className="app h-screen w-screen overflow-y-scroll">
-        <div className="bg-fuchsia-950 w-full min-h-full bg-fixed bg-center bg-cover">
+      <div className="app h-screen w-full md:w-screen md:h-screen overflow-y-scroll">
+        <div className="bg-fuchsia-950 flex-wrap w-full min-h-full bg-fixed bg-center bg-cover">
           <div className="custom-shape-divider-top-1689743221">
             <svg
               data-name="Layer 1"
@@ -32,24 +32,24 @@ function App() {
               ></path>
             </svg>
           </div>
-          <div className="flex mt-14 justify-between items-center w-4/5">
-            <h1 className="left-1/4 text-center justify-center items-center text-neutral-50 relative text-5xl md:text-8xl">
+          <div className="flex flex-wrap mt-14 justify-between items-center w-4/5 mx-auto">
+            <h1 className="left-1/4 flex flex-wrap mt-[2%] text-neutral-50 relative text-4xl sm:text-5xl md:text-6xl lg:text-8xl">
               Hello, I&apos;m Jordan Lowe
             </h1>
           </div>
-          <div className="flex flex-col md:flex-row p-8">
-            <div className="flex flex-row mt-12 flex-shrink">
-              <div className="flex  text-neutral-50 w-full md:w-1/3 font-semibold text-3xl md:text-4xl mr-16">
+          <div className="flex flex-col md:flex-row p-4 md:p-8">
+            <div className="flex flex-row mt-8 md:mt-12 md:flex-row">
+              <div className="flex  text-neutral-50 w-full md:w-1/3 font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                 <TechnicalSkills setSelectedLanguage={setSelectedLanguage} />
               </div>
-              <div className="aboutMeContainer justify-center items-center flex-shrink">
-                <div className="aboutMeDiv justify-center pt-12">
+              <div className="aboutMeContainer justify-center items-center mt-6 md:mt-0 md:ml-8 lg:ml-16">
+                <div className="aboutMeDiv justify-center pt-6 md:pt-12">
                   <div className="w-full md:w-4/5 mx-auto md:left-1/2 md:top-1/2">
-                    <h2 className="text-center  font-bold justify-center relative text-neutral-50 text-6xl md:text-6xl mb-12">
+                    <h2 className="text-center  font-bold justify-center relative text-neutral-50 text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-12">
                       {selectedLanguage?.language_name}
                     </h2>
                     {selectedLanguage ? (
-                      <p className="w-full text-3xl tracking-wide leading-relaxed">
+                      <p className="w-full text-xl sm:text-2xl md:text-3xl tracking-wide leading-relaxed">
                         {selectedLanguage.language_info}
                       </p>
                     ) : (
@@ -59,10 +59,10 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="flex z-10 ">
-              <div className="flex h-screen right-0 fixed top-0 text-lg text-neutral-50 z-10">
-                <div className="flex flex-col ">
-                  <div className=" rounded-md h-full bg-gradient-to-tr from-pink-500 via-red-500 to-fuchsia-600 pl-4 ">
+            <div className="flex flex-wrap z-10 mt-6 md:mt-0">
+              <div className="flex flex-wrap h-screen -right-0 absolute top-0 text-base sm:text-lg md:text-xl text-neutral-50 z-10">
+                <div className="flex flex-col">
+                  <div className="rounded-md h-full bg-gradient-to-tr from-pink-500 via-red-500 to-fuchsia-600 pl-4 ">
                     <div className="flex h-full flex-col bg-fuchsia-950 z-10">
                       <NavBar />
                     </div>
